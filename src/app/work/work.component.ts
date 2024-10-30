@@ -24,7 +24,7 @@ export class WorkComponent {
         github: 'https://github.com',
         external: 'https://projecta.com'
       },
-      image: '/placeholder.svg?height=300&width=500'
+      image: 'https://via.placeholder.com/500x300'
     },
     {
       title: 'Project B',
@@ -34,7 +34,7 @@ export class WorkComponent {
         github: 'https://github.com',
         external: 'https://projectb.com'
       },
-      image: '/placeholder.svg?height=300&width=500'
+      image: 'https://via.placeholder.com/500x300'
     },
     {
       title: 'Project C',
@@ -44,7 +44,7 @@ export class WorkComponent {
         github: 'https://github.com',
         external: 'https://projectc.com'
       },
-      image: '/placeholder.svg?height=300&width=500'
+      image: 'https://via.placeholder.com/500x300'
     }
   ];
 }

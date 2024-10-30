@@ -17,36 +17,39 @@ interface Job {
 export class ExperienceComponent {
   jobs: Job[] = [
     {
-      company: 'Company A',
+      company: 'Innovative Tech',
       title: 'Senior Software Engineer',
       range: 'January 2021 - Present',
-      url: 'https://companya.com',
+      url: 'https://innovativetech.com',
       responsibilities: [
-        'Developed and maintained web applications using Angular and Node.js',
-        'Collaborated with cross-functional teams to deliver high-quality software solutions',
-        'Implemented CI/CD pipelines to streamline development processes'
+        'Led the development of a high-performance web application using Angular and Node.js, resulting in a 40% increase in user engagement',
+        'Implemented advanced caching strategies and optimized database queries, improving overall application response time by 60%',
+        'Mentored junior developers, conducted code reviews, and established best practices, enhancing team productivity by 25%',
+        'Collaborated with UX/UI designers to implement responsive and accessible designs, ensuring WCAG 2.1 AA compliance'
       ]
     },
     {
-      company: 'Company B',
+      company: 'DataDriven Solutions',
       title: 'Full Stack Developer',
       range: 'June 2018 - December 2020',
-      url: 'https://companyb.com',
+      url: 'https://datadrivensolutions.com',
       responsibilities: [
-        'Built responsive web applications using React and Express.js',
-        'Optimized database queries and improved application performance',
-        'Mentored junior developers and conducted code reviews'
+        'Developed and maintained multiple RESTful APIs using Express.js and MongoDB, supporting over 1 million daily active users',
+        'Architected and implemented a real-time data visualization dashboard using React and D3.js, processing over 100,000 data points per second',
+        'Integrated machine learning models into the application pipeline, improving prediction accuracy by 30%',
+        'Participated in agile development processes, consistently delivering features on time and within scope'
       ]
     },
     {
-      company: 'Company C',
+      company: 'WebCraft Studios',
       title: 'Junior Web Developer',
       range: 'September 2016 - May 2018',
-      url: 'https://companyc.com',
+      url: 'https://webcraftstudios.com',
       responsibilities: [
-        'Assisted in the development of company websites and internal tools',
-        'Implemented design mockups using HTML, CSS, and JavaScript',
-        'Participated in agile development processes and sprint planning'
+        'Collaborated on the development of responsive websites for various clients using HTML5, CSS3, and JavaScript',
+        'Implemented pixel-perfect designs from Figma mockups, ensuring cross-browser compatibility and mobile responsiveness',
+        'Assisted in the migration of legacy PHP applications to modern JavaScript frameworks, improving maintainability and performance',
+        'Contributed to the companys internal component library, streamlining development processes and ensuring consistency across projects'
       ]
     }
   ];

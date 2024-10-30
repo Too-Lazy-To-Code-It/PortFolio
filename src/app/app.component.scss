@@ -1,5 +1,5 @@
 :root {
-  --navy: #0a192f;
+  --navy: #020c1b;
   --light-navy: #112240;
   --lightest-navy: #233554;
   --slate: #8892b0;
@@ -9,14 +9,14 @@
   --green: #64ffda;
   --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-  --fz-xxs: 12px;
-  --fz-xs: 13px;
-  --fz-sm: 14px;
-  --fz-md: 16px;
-  --fz-lg: 18px;
-  --fz-xl: 20px;
-  --fz-xxl: 22px;
-  --fz-heading: 32px;
+  --fz-xxs: 13px;
+  --fz-xs: 14px;
+  --fz-sm: 16px;
+  --fz-md: 18px;
+  --fz-lg: 20px;
+  --fz-xl: 22px;
+  --fz-xxl: 24px;
+  --fz-heading: 36px;
 }
 
 :host {
@@ -100,7 +100,7 @@
   color: var(--lightest-slate);
   text-decoration: none;
   font-family: var(--font-mono);
-  font-size: var(--fz-xs);
+  font-size: var(--fz-sm);
   transition: color 0.2s ease;
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -159,7 +159,7 @@
     position: relative;
     margin: 10px 0 40px;
     width: 100%;
-    font-size: clamp(26px, 5vw, 32px);
+    font-size: clamp(28px, 5vw, 36px);
     white-space: nowrap;
 
     &::before {
@@ -238,4 +238,8 @@
   .main-content {
     padding-top: 70px;
   }
+}
+
+body {
+  font-size: var(--fz-lg);
 }

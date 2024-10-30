@@ -4,34 +4,46 @@
   <div class="inner">
     <div role="tablist" aria-label="Job tabs" class="job-tabs">
       @for (job of jobs; track job; let i = $index) {
-      <button class="job-tab" [class.active]="i === activeTabIndex" (click)="setActiveTab(i)" role="tab"
-        [attr.aria-selected]="i === activeTabIndex" [attr.aria-controls]="'panel-' + i" [id]="'tab-' + i">
-        <span>{{ job.company }}</span>
-      </button>
+        <button
+          class="job-tab"
+          [class.active]="i === activeTabIndex"
+          (click)="setActiveTab(i)"
+          role="tab"
+          [attr.aria-selected]="i === activeTabIndex"
+          [attr.aria-controls]="'panel-' + i"
+          [id]="'tab-' + i"
+        >
+          <span>{{ job.company }}</span>
+        </button>
       }
     </div>
 
     <div class="job-panels">
       @for (job of jobs; track job; let i = $index) {
-      @if (i === activeTabIndex) {
-      <div class="job-panel" role="tabpanel" [id]="'panel-' + i" [attr.aria-labelledby]="'tab-' + i">
-        <h3>
-          <span>{{ job.title }}</span>
-          <span class="company">
-            &nbsp;&#64;&nbsp;
-            <a [href]="job.url" class="inline-link">{{ job.company }}</a>
-          </span>
-        </h3>
+        @if (i === activeTabIndex) {
+          <div
+            class="job-panel"
+            role="tabpanel"
+            [id]="'panel-' + i"
+            [attr.aria-labelledby]="'tab-' + i"
+          >
+            <h3>
+              <span>{{ job.title }}</span>
+              <span class="company">
+                &nbsp;&#64;&nbsp;
+                <a [href]="job.url" class="inline-link" target="_blank" rel="noopener noreferrer">{{ job.company }}</a>
+              </span>
+            </h3>
 
-        <p class="range">{{ job.range }}</p>
+            <p class="range">{{ job.range }}</p>
 
-        <ul>
-          @for (item of job.responsibilities; track item) {
-          <li>{{ item }}</li>
-          }
-        </ul>
-      </div>
-      }
+            <ul class="responsibility-list">
+              @for (item of job.responsibilities; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </div>
+        }
       }
     </div>
   </div>

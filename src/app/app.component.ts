@@ -1,10 +1,15 @@
 import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { WorkComponent } from './work/work.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, HomeComponent, AboutComponent, ExperienceComponent, WorkComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

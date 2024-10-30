@@ -15,26 +15,36 @@ interface Project {
   styleUrls: ['./work.component.scss']
 })
 export class WorkComponent {
-  featuredProjects:  Project[] = [
+  featuredProjects: Project[] = [
     {
-      title: 'Halcyon Theme',
-      description: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
-      tech: ['VS Code', 'Sublime Text', 'Atom', 'iTerm2', 'Hyper'],
+      title: 'Project A',
+      description: 'A web application for managing personal finances and budgeting. Features include expense tracking, income management, and financial goal setting.',
+      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
       links: {
-        github: 'https://github.com/Too-Lazy-To-Code-It/PortFolio',
-        external: 'none'
+        github: 'https://github.com',
+        external: 'https://projecta.com'
       },
-      image: 'https://placehold.in/200.avif'
+      image: '/placeholder.svg?height=300&width=500'
     },
     {
-      title: 'Spotify Profile',
-      description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
-      tech: ['React', 'Styled Components', 'Express', 'Spotify API', 'Heroku'],
+      title: 'Project B',
+      description: 'An e-commerce platform for artisanal products. Includes features like user authentication, product catalog, shopping cart, and secure payment integration.',
+      tech: ['Angular', 'Firebase', 'Stripe API'],
       links: {
-        github: 'https://github.com/Too-Lazy-To-Code-It/PortFolio',
-        external: ''
+        github: 'https://github.com',
+        external: 'https://projectb.com'
       },
-      image: 'https://placehold.in/200.avif'
+      image: '/placeholder.svg?height=300&width=500'
+    },
+    {
+      title: 'Project C',
+      description: 'A mobile app for tracking fitness activities and nutrition. Integrates with wearable devices and provides personalized workout and meal plans.',
+      tech: ['React Native', 'Redux', 'GraphQL', 'AWS'],
+      links: {
+        github: 'https://github.com',
+        external: 'https://projectc.com'
+      },
+      image: '/placeholder.svg?height=300&width=500'
     }
   ];
 }

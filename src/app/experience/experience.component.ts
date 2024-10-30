@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 interface Job {
   company: string;
   title: string;
-  date: string;
+  range: string;
+  url: string;
   responsibilities: string[];
 }
 
@@ -16,30 +17,43 @@ interface Job {
 export class ExperienceComponent {
   jobs: Job[] = [
     {
-      company: 'Upstatement',
-      title: 'Engineer',
-      date: 'May 2024 - Present',
+      company: 'Company A',
+      title: 'Senior Software Engineer',
+      range: 'January 2021 - Present',
+      url: 'https://companya.com',
       responsibilities: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        'Developed and maintained web applications using Angular and Node.js',
+        'Collaborated with cross-functional teams to deliver high-quality software solutions',
+        'Implemented CI/CD pipelines to streamline development processes'
       ]
     },
     {
-      company: 'Apple',
-      title: 'UI Engineer Co-op',
-      date: 'July - December 2017',
+      company: 'Company B',
+      title: 'Full Stack Developer',
+      range: 'June 2018 - December 2020',
+      url: 'https://companyb.com',
       responsibilities: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        'Built responsive web applications using React and Express.js',
+        'Optimized database queries and improved application performance',
+        'Mentored junior developers and conducted code reviews'
+      ]
+    },
+    {
+      company: 'Company C',
+      title: 'Junior Web Developer',
+      range: 'September 2016 - May 2018',
+      url: 'https://companyc.com',
+      responsibilities: [
+        'Assisted in the development of company websites and internal tools',
+        'Implemented design mockups using HTML, CSS, and JavaScript',
+        'Participated in agile development processes and sprint planning'
       ]
     }
   ];
 
-  activeJobIndex = 0;
+  activeTabIndex = 0;
 
-  setActiveJob(index: number) {
-    this.activeJobIndex = index;
+  setActiveTab(index: number) {
+    this.activeTabIndex = index;
   }
 }

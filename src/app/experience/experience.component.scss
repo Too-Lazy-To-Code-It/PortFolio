@@ -1,185 +1,147 @@
 .experience-section {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 100px 0;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.inner {
+  display: flex;
+
+  @media (max-width: 600px) {
+    display: block;
   }
-  
-  .numbered-heading {
+}
+
+.job-tabs {
+  position: relative;
+  z-index: 3;
+  width: max-content;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (max-width: 600px) {
     display: flex;
-    align-items: center;
-    position: relative;
-    margin: 10px 0 40px;
-    width: 100%;
-    font-size: clamp(26px, 5vw, 32px);
-    white-space: nowrap;
-  
-    &::before {
-      position: relative;
-      bottom: 4px;
-      counter-increment: section 1;
-      content: "0" counter(section) ".";
-      margin-right: 10px;
-      color: #64ffda;
-      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-      font-size: clamp(16px, 3vw, 20px);
-      font-weight: 400;
-    }
-  
-    &::after {
-      content: "";
-      display: block;
-      position: relative;
-      top: -5px;
-      width: 300px;
-      height: 1px;
-      margin-left: 20px;
-      background-color: #233554;
+    overflow-x: auto;
+    width: calc(100% + 50px);
+    padding-left: 50px;
+    margin-left: -50px;
+    margin-bottom: 30px;
+  }
+}
+
+.job-tab {
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  padding: 0 20px 2px;
+  border-left: 2px solid var(--lightest-navy);
+  background-color: transparent;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  text-align: left;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: var(--light-navy);
+    color: var(--green);
+  }
+
+  &.active {
+    color: var(--green);
+    border-left: 2px solid var(--green);
+  }
+}
+
+.job-panels {
+  position: relative;
+  width: 100%;
+  margin-left: 20px;
+
+  @media (max-width: 600px) {
+    margin-left: 0;
+  }
+}
+
+.job-panel {
+  width: 100%;
+  height: auto;
+  padding: 10px 5px;
+
+  h3 {
+    margin-bottom: 2px;
+    font-size: var(--fz-xxl);
+    font-weight: 500;
+    line-height: 1.3;
+
+    .company {
+      color: var(--green);
     }
   }
-  
-  .inner {
-    display: flex;
-  
-    @media (max-width: 600px) {
-      display: block;
-    }
+
+  .range {
+    margin-bottom: 25px;
+    color: var(--light-slate);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
   }
-  
-  .tab-list {
-    position: relative;
-    z-index: 3;
-    width: max-content;
+
+  ul {
     padding: 0;
     margin: 0;
     list-style: none;
-  
-    @media (max-width: 600px) {
-      display: flex;
-      overflow-x: auto;
-      width: calc(100% + 50px);
-      padding-left: 50px;
-      margin-left: -50px;
-      margin-bottom: 30px;
-    }
-    @media (max-width: 480px) {
-      width: calc(100% + 25px);
-      padding-left: 25px;
-      margin-left: -25px;
-    }
-  }
-  
-  .tab-button {
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    position: relative;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 42px;
-    padding: 0 20px 2px;
-    border-left: 2px solid #233554;
-    background-color: transparent;
-    color: #8892b0;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-    font-size: 13px;
-    text-align: left;
-    white-space: nowrap;
-  
-    &:hover,
-    &:focus {
-      background-color: #112240;
-      color: #64ffda;
-    }
-  
-    &.active {
-      color: #64ffda;
-      border-left: 2px solid #64ffda;
-    }
-  }
-  
-  .tab-panels {
-    position: relative;
-    width: 100%;
-    margin-left: 20px;
-  
-    @media (max-width: 600px) {
-      margin-left: 0;
-    }
-  }
-  
-  .tab-panel {
-    width: 100%;
-    height: auto;
-    padding: 10px 5px;
-  
-    h3 {
-      margin-bottom: 2px;
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 1.3;
-  
-      .company {
-        color: #64ffda;
-      }
-    }
-  
-    .range {
-      margin-bottom: 25px;
-      color: #a8b2d1;
-      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-      font-size: 13px;
-    }
-  
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      font-size: 18px;
-  
-      li {
-        position: relative;
-        padding-left: 30px;
-        margin-bottom: 10px;
-  
-        &::before {
-          content: '▹';
-          position: absolute;
-          left: 0;
-          color: #64ffda;
-        }
-      }
-    }
-  }
-  
-  .inline-link {
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    position: relative;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    color: #64ffda;
-  
-    &:hover,
-    &:focus,
-    &:active {
-      color: #64ffda;
-      outline: 0;
-  
-      &::after {
-        width: 100%;
-      }
-    }
-  
-    &::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 1px;
+    font-size: var(--fz-lg);
+
+    li {
       position: relative;
-      bottom: 0.37em;
-      background-color: #64ffda;
-      transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-      opacity: 0.5;
+      padding-left: 30px;
+      margin-bottom: 10px;
+
+      &::before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--green);
+      }
     }
   }
+}
+
+.inline-link {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  color: var(--green);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--green);
+    outline: 0;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: var(--green);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0.5;
+  }
+}

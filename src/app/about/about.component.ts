@@ -10,9 +10,13 @@ export class AboutComponent {
   skills: string[] = [
     'JavaScript (ES6+)',
     'TypeScript',
-    'React',
     'Angular',
+    'React',
     'Node.js',
-    'Python'
+    'Python',
+    'SQL',
+    'Git'
   ];
+
+  placeholderImage = 'https://via.placeholder.com/300x300';
 }

@@ -1,1 +1,34 @@
-<p>experience works!</p>
+<section class="experience-section">
+    <h2 class="numbered-heading">Where I've Worked</h2>
+    <div class="inner">
+      <div class="tab-list">
+        @for (job of jobs; track job; let i = $index) {
+          <button
+            class="tab-button"
+            [class.active]="i === activeJobIndex"
+            (click)="setActiveJob(i)"
+          >
+            {{ job.company }}
+          </button>
+        }
+      </div>
+  
+      <div class="tab-panels">
+        <div class="tab-panel" *ngIf="jobs[activeJobIndex] as job">
+          <h3>
+            <span>{{ job.title }}</span>
+            <span class="company">
+              &nbsp;&nbsp;
+              <a href="#" class="inline-link">{{ job.company }}</a>
+            </span>
+          </h3>
+          <p class="range">{{ job.date }}</p>
+          <ul>
+            @for (responsibility of job.responsibilities; track responsibility) {
+              <li>{{ responsibility }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,66 @@
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .greeting {
+    color: #64ffda;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  .name {
+    color: #ccd6f6;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .tagline {
+    color: #8892b0;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .description {
+    color: #8892b0;
+    margin-top: 20px;
+    max-width: 540px;
+    font-size: 20px;
+    line-height: 1.5;
+  
+    a {
+      color: #64ffda;
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .cta-button {
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 14px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    margin-top: 50px;
+    width: max-content;
+  
+    &:hover {
+      background-color: rgba(100,255,218,0.1);
+    }
+  }

@@ -3,10 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-
+  skills: string[] = [
+    'JavaScript (ES6+)',
+    'TypeScript',
+    'React',
+    'Angular',
+    'Node.js',
+    'Python'
+  ];
 }

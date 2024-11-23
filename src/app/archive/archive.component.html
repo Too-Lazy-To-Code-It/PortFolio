@@ -1,0 +1,48 @@
+<div class="archive-container">
+  <header>
+    <nav>
+      <a [routerLink]="['/']">Adam Rafraf</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="archive-section">
+      <h1 class="numbered-heading">Archive</h1>
+      <p class="archive-subtitle">A big list of things I've worked on</p>
+
+      <div class="archive-table-container">
+        <table class="archive-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Title</th>
+              <th>Made at</th>
+              <th>Built with</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (project of archiveProjects; track project.title) {
+              <tr>
+                <td>{{ project.year }}</td>
+                <td>{{ project.title }}</td>
+                <td>{{ project.madeAt }}</td>
+                <td>
+                  @for (tech of project.builtWith; track tech) {
+                    <span class="tech-item">{{ tech }}</span>
+                  }
+                </td>
+                <td>
+                  <a [href]="project.link" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+

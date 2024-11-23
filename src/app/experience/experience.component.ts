@@ -12,46 +12,44 @@ interface Job {
   selector: 'app-experience',
   standalone: true,
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrls: ['./experience.component.scss'],
 })
 export class ExperienceComponent {
   jobs: Job[] = [
     {
-      company: 'Innovative Tech',
-      title: 'Senior Software Engineer',
-      range: 'January 2021 - Present',
-      url: 'https://innovativetech.com',
+      company: 'Re:School',
+      title: 'Game Development Intern',
+      range: 'July 2024 - September 2024',
+      url: 'https://reschool.com',
       responsibilities: [
-        'Led the development of a high-performance web application using Angular and Node.js, resulting in a 40% increase in user engagement',
-        'Implemented advanced caching strategies and optimized database queries, improving overall application response time by 60%',
-        'Mentored junior developers, conducted code reviews, and established best practices, enhancing team productivity by 25%',
-        'Collaborated with UX/UI designers to implement responsive and accessible designs, ensuring WCAG 2.1 AA compliance'
-      ]
+        'Enhanced *Al Moughamiroun 2*, a 2D educational game, by expanding themes from 5 to 8 and designing 7+ maps per theme',
+        'Integrated advanced mechanics such as zero gravity, reversed gravity, and planet gravity, boosting player engagement',
+        'Optimized gameplay systems, improving response time by 25% and enhancing the overall user experience',
+        'Collaborated with the team to create new assets using Photoshop and Illustrator, ensuring consistent visual design'
+      ],
     },
     {
-      company: 'DataDriven Solutions',
-      title: 'Full Stack Developer',
-      range: 'June 2018 - December 2020',
-      url: 'https://datadrivensolutions.com',
+      company: 'Technologia Academy',
+      title: 'Full-Stack Web Developer',
+      range: 'August 2023 - September 2023',
+      url: 'https://technologia-academy.com',
       responsibilities: [
-        'Developed and maintained multiple RESTful APIs using Express.js and MongoDB, supporting over 1 million daily active users',
-        'Architected and implemented a real-time data visualization dashboard using React and D3.js, processing over 100,000 data points per second',
-        'Integrated machine learning models into the application pipeline, improving prediction accuracy by 30%',
-        'Participated in agile development processes, consistently delivering features on time and within scope'
-      ]
+        'Developed a high-performance web application using Angular and Node.js, achieving load times under 3 seconds',
+        'Designed and implemented responsive UI components, enabling seamless real-time data interactions via REST APIs',
+        'Collaborated with peers to deliver a feature-complete final project that adhered to industry best practices'
+      ],
     },
     {
-      company: 'WebCraft Studios',
-      title: 'Junior Web Developer',
-      range: 'September 2016 - May 2018',
-      url: 'https://webcraftstudios.com',
+      company: 'CPF',
+      title: 'Exploratory Intern',
+      range: 'June 2021 - July 2021',
+      url: 'https://cpf.com',
       responsibilities: [
-        'Collaborated on the development of responsive websites for various clients using HTML5, CSS3, and JavaScript',
-        'Implemented pixel-perfect designs from Figma mockups, ensuring cross-browser compatibility and mobile responsiveness',
-        'Assisted in the migration of legacy PHP applications to modern JavaScript frameworks, improving maintainability and performance',
-        'Contributed to the companys internal component library, streamlining development processes and ensuring consistency across projects'
-      ]
-    }
+        'Gained hands-on experience in database management and enterprise-level backup systems',
+        'Explored advanced computer hardware and networking configurations, improving diagnostic skills',
+        'Contributed to internal documentation on system configurations and maintenance procedures'
+      ],
+    },
   ];
 
   activeTabIndex = 0;

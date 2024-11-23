@@ -1,6 +1,6 @@
 <div class="cursor" #cursor></div>
 
-<div class="app-container">
+<div class="app-container" *ngIf="!isArchivePage">
   <nav class="side-nav" [class.nav-hidden]="isNavHidden">
     <div class="logo">
       <a href="#" class="nav-link">B</a>
@@ -32,12 +32,15 @@
     </div>
   </nav>
 
-
   <main class="main-content">
     <app-home id="home"></app-home>
     <app-about id="about"></app-about>
     <app-experience id="experience"></app-experience>
     <app-work id="work"></app-work>
+    <app-other-noteworthy-projects id="projects"></app-other-noteworthy-projects>
     <app-contact id="contact"></app-contact>
   </main>
 </div>
+
+<router-outlet *ngIf="isArchivePage"></router-outlet>
+

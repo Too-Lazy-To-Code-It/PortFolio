@@ -12,39 +12,40 @@ interface Project {
   selector: 'app-work',
   standalone: true,
   templateUrl: './work.component.html',
-  styleUrls: ['./work.component.scss']
+  styleUrls: ['./work.component.scss'],
 })
 export class WorkComponent {
   featuredProjects: Project[] = [
     {
-      title: 'Project A',
-      description: 'A web application for managing personal finances and budgeting. Features include expense tracking, income management, and financial goal setting.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+      title: 'Artounsi',
+      description:
+        'An art gallery mobile application showcasing and selling artwork. Includes secure Firebase backend, intuitive user interface, and cross-platform compatibility.',
+      tech: ['Flutter', 'Firebase'],
       links: {
-        github: 'https://github.com',
-        external: 'https://projecta.com'
+        github: 'https://github.com/Too-Lazy-To-Code-It/artounsi',
+        external: 'https://too-lazy-to-code-it.github.io/artounsi',
       },
-      image: 'https://via.placeholder.com/500x300'
+      image: 'https://via.placeholder.com/500x300', // Replace with actual image URL
     },
     {
-      title: 'Project B',
-      description: 'An e-commerce platform for artisanal products. Includes features like user authentication, product catalog, shopping cart, and secure payment integration.',
-      tech: ['Angular', 'Firebase', 'Stripe API'],
+      title: 'Sea of Wonders',
+      description:
+        'A deep-sea exploration game with advanced underwater mechanics, realistic visuals, and immersive gameplay, built using Unreal Engine.',
+      tech: ['Unreal Engine', 'Blueprints'],
       links: {
-        github: 'https://github.com',
-        external: 'https://projectb.com'
+        external: 'https://too-lazy-to-code-it.github.io/sea-of-wonders',
       },
-      image: 'https://via.placeholder.com/500x300'
+      image: 'https://via.placeholder.com/500x300', // Replace with actual image URL
     },
     {
-      title: 'Project C',
-      description: 'A mobile app for tracking fitness activities and nutrition. Integrates with wearable devices and provides personalized workout and meal plans.',
-      tech: ['React Native', 'Redux', 'GraphQL', 'AWS'],
+      title: 'Pac-Man AI',
+      description:
+        'A Pac-Man-inspired game using Unity and ML-Agents to create AI-driven gameplay for dynamic and challenging player experiences.',
+      tech: ['Unity', 'ML-Agents', 'C#'],
       links: {
-        github: 'https://github.com',
-        external: 'https://projectc.com'
+        github: 'https://github.com/Too-Lazy-To-Code-It/pacman-ai',
       },
-      image: 'https://via.placeholder.com/500x300'
-    }
+      image: 'https://via.placeholder.com/500x300', // Replace with actual image URL
+    },
   ];
 }

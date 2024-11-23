@@ -15,7 +15,10 @@ export class AboutComponent {
     'Node.js',
     'Python',
     'SQL',
-    'Git'
+    'Docker',
+    'Jenkins',
+    'Unity (2D/3D)',
+    'Firebase',
   ];
 
   placeholderImage = 'https://via.placeholder.com/300x300';

@@ -1,7 +1,66 @@
+// Variables
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --navy-shadow: rgba(2,12,27,0.7);
+  --dark-slate: #495670;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --green-tint: rgba(100,255,218,0.1);
+  
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+}
+
 .experience-section {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 100px 0;
+
+  .numbered-heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 40px;
+    width: 100%;
+    font-size: clamp(26px, 5vw, 32px);
+    white-space: nowrap;
+    color: var(--lightest-slate);
+    font-family: var(--font-sans);
+
+    &::before {
+      position: relative;
+      counter-increment: section 1;
+      content: "02.";
+      margin-right: 10px;
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+      font-weight: 400;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: relative;
+      width: 300px;
+      height: 1px;
+      margin-left: 20px;
+      background-color: var(--lightest-navy);
+    }
+  }
 }
 
 .inner {
@@ -24,7 +83,6 @@
     display: flex;
     overflow-x: auto;
     width: calc(100% + 50px);
-    padding-left: 50px;
     margin-left: -50px;
     margin-bottom: 30px;
   }
@@ -47,11 +105,14 @@
   font-size: var(--fz-xs);
   text-align: left;
   white-space: nowrap;
+  cursor: pointer;
+  border: none;
 
   &:hover,
   &:focus {
     background-color: var(--light-navy);
     color: var(--green);
+    outline: none;
   }
 
   &.active {
@@ -80,6 +141,7 @@
     font-size: var(--fz-xxl);
     font-weight: 500;
     line-height: 1.3;
+    color: var(--lightest-slate);
 
     .company {
       color: var(--green);
@@ -98,6 +160,7 @@
     margin: 0;
     list-style: none;
     font-size: var(--fz-lg);
+    color: var(--slate);
 
     li {
       position: relative;
@@ -146,7 +209,7 @@
   }
 }
 
-// Add some animations
+// Animations
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -159,31 +222,20 @@
 }
 
 .job-panel {
-  animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
-.job-tab {
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    transform: translateX(5px);
-  }
-
-  &.active {
-    transform: translateX(5px);
-  }
-}
-
-// Improve accessibility
+// Accessibility improvements
 .job-tab:focus {
   outline: 2px solid var(--green);
   outline-offset: -2px;
 }
 
-// Add some depth
-.job-panels {
-  box-shadow: 0 10px 30px -15px var(--navy-shadow);
-  border-radius: 4px;
-  background-color: var(--light-navy);
-  padding: 20px;
+// Base styles for the entire component
+:host {
+  display: block;
+  background-color: var(--navy);
+  color: var(--slate);
+  font-family: var(--font-sans);
 }
+

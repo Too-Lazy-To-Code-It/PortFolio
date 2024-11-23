@@ -21,5 +21,5 @@ export class AboutComponent {
     'Firebase',
   ];
 
-  placeholderImage = 'https://via.placeholder.com/300x300';
+  placeholderImage = 'cvgamerbg.png';
 }

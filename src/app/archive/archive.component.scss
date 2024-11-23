@@ -1,7 +1,32 @@
+// Custom properties
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  
+  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --fz-heading: 32px;
+}
+
 .archive-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding: 0;
   background-color: var(--navy);
   color: var(--slate);
 
@@ -9,7 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 50px;
     background-color: var(--navy);
 
     nav {
@@ -18,9 +43,10 @@
         font-family: var(--font-mono);
         font-size: var(--fz-md);
         text-decoration: none;
+        transition: color 0.25s ease-in-out;
 
         &:hover {
-          color: var(--green-tint);
+          color: var(--lightest-slate);
         }
       }
     }
@@ -28,75 +54,110 @@
 
   main {
     flex: 1;
-    padding: 50px 150px;
+    padding: 0 100px;
   }
 }
 
 .archive-section {
-  max-width: 1000px;
+  max-width: 1600px;
   margin: 0 auto;
+  padding: 100px 0;
 
   .numbered-heading {
-    font-size: clamp(26px, 5vw, var(--fz-heading));
-    margin-bottom: 10px;
+    font-size: clamp(40px, 5vw, 60px);
+    margin: 0 0 10px;
     color: var(--lightest-slate);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    line-height: 1.1;
   }
 
   .archive-subtitle {
-    color: var(--slate);
+    color: var(--green);
     font-family: var(--font-mono);
     font-size: var(--fz-md);
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 
   .archive-table-container {
+    width: 100%;
     overflow-x: auto;
   }
 
   .archive-table {
     width: 100%;
-    border-collapse: collapse;
-
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
+    border-collapse: separate;
+    border-spacing: 0;
 
     th {
-      background-color: var(--light-navy);
+      padding: 10px 20px;
+      text-align: left;
+      white-space: nowrap;
       color: var(--lightest-slate);
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
       font-weight: 400;
-      white-space: nowrap;
-    }
-
-    td {
-      font-size: var(--fz-sm);
+      text-transform: capitalize;
+      letter-spacing: 0.05em;
 
       &:first-child {
-        font-family: var(--font-mono);
-        color: var(--green);
+        padding-left: 0;
       }
     }
 
-    tr:nth-child(even) {
-      background-color: var(--light-navy);
+    td {
+      padding: 12px 20px;
+      font-family: var(--font-sans);
+      font-size: var(--fz-md);
+      line-height: 1.5;
+      color: var(--light-slate);
+
+      &:first-child {
+        padding-left: 0;
+        font-family: var(--font-mono);
+        font-size: var(--fz-xs);
+        color: var(--green);
+        white-space: nowrap;
+      }
+    }
+
+    tr {
+      transition: background-color 0.25s ease;
+
+      &:hover {
+        background-color: var(--light-navy);
+      }
     }
 
     .tech-item {
       display: inline-block;
-      margin-right: 10px;
       font-family: var(--font-mono);
       font-size: var(--fz-xxs);
       color: var(--slate);
+      line-height: 1.75;
+
+      &:not(:last-child)::after {
+        content: " · ";
+        margin: 0 5px;
+        color: var(--lightest-navy);
+      }
     }
 
-    svg {
-      width: 20px;
-      height: 20px;
-      color: var(--lightest-slate);
+    a {
+      display: inline-block;
+      color: var(--light-slate);
+      transition: color 0.25s ease;
+
+      &:hover {
+        color: var(--green);
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+      }
     }
   }
 }
@@ -104,7 +165,17 @@
 @media (max-width: 768px) {
   .archive-container {
     main {
-      padding: 50px 20px;
+      padding: 0 25px;
+    }
+  }
+
+  .archive-section {
+    padding: 80px 0;
+  }
+
+  .archive-table {
+    td, th {
+      padding: 10px;
     }
   }
 }

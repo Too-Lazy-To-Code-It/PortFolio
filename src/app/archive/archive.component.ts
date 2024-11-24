@@ -22,42 +22,28 @@ export class ArchiveComponent {
     {
       year: 2024,
       title: 'Artounsi',
-      madeAt: 'Personal Project',
+      madeAt: 'Academic project',
       builtWith: ['Flutter', 'Firebase'],
       link: 'https://github.com/Too-Lazy-To-Code-It/artounsi',
     },
     {
       year: 2024,
       title: 'Sea of Wonders',
-      madeAt: 'Personal Project',
+      madeAt: 'Academic project',
       builtWith: ['Unreal Engine', 'Blueprints'],
       link: 'https://too-lazy-to-code-it.github.io/sea-of-wonders',
     },
     {
       year: 2024,
       title: 'Pac-Man AI',
-      madeAt: 'Personal Project',
+      madeAt: 'Academic project',
       builtWith: ['Unity', 'ML-Agents', 'C#'],
       link: 'https://github.com/Too-Lazy-To-Code-It/pacman-ai',
     },
     {
-      year: 2023,
-      title: 'CI/CD Pipeline for Spring Project',
-      madeAt: 'Technologia Academy',
-      builtWith: ['Jenkins', 'Docker', 'Spring', 'SonarQube'],
-      link: '#', // Replace with actual link if available
-    },
-    {
-      year: 2023,
-      title: 'BuyCycle',
-      madeAt: 'Personal Project',
-      builtWith: ['MEAN Stack', 'Angular', 'Node.js'],
-      link: 'https://github.com/Too-Lazy-To-Code-It/buycycle',
-    },
-    {
       year: 2024,
       title: 'Physics Engine',
-      madeAt: 'Personal Project',
+      madeAt: 'Academic project',
       builtWith: ['Unity', 'C#', 'Custom Physics'],
       link: 'https://github.com/Too-Lazy-To-Code-It/physics-engine',
     },
@@ -65,29 +51,72 @@ export class ArchiveComponent {
       year: 2024,
       title: 'Al Moughamiroun 2',
       madeAt: 'Re:School',
-      builtWith: ['Unity', '2D Game Mechanics'],
+      builtWith: ['Unity', '2D Game Mechanics', 'Mirror Networking'],
+      link: '#', // Replace with actual link if available
+    },
+    {
+      year: 2024,
+      title: 'Akhlate',
+      madeAt: 'Game Jam',
+      builtWith: ['Unity', 'C#'],
+      link: '#', // Replace with actual link if available
+    },
+    {
+      year: 2023,
+      title: 'Chemistry Lab (VR)',
+      madeAt: 'Academic project',
+      builtWith: ['Unity', 'VR', 'Mirror Networking'],
+      link: '#', // Replace with actual link if available
+    },
+    {
+      year: 2023,
+      title: 'BuyCycle',
+      madeAt: 'Technologia Academy',
+      builtWith: ['MEAN Stack', 'Angular', 'Node.js'],
+      link: 'https://github.com/Too-Lazy-To-Code-It/buycycle',
+    },
+    {
+      year: 2023,
+      title: 'CI/CD Pipeline for Spring Project',
+      madeAt: 'Academic project',
+      builtWith: ['Jenkins', 'Docker', 'Spring', 'SonarQube'],
       link: '#', // Replace with actual link if available
     },
     {
       year: 2022,
       title: 'EcoInfiltrators',
-      madeAt: 'University Project',
-      builtWith: ['MEAN Stack', 'Angular', 'MongoDB'],
+      madeAt: 'Academic project',
+      builtWith: ['Unity', 'MEAN Stack', 'Angular', 'Mirror Networking'],
       link: '#', // Replace with actual link if available
     },
     {
       year: 2022,
-      title: 'Chemistry Lab (VR)',
-      madeAt: 'Personal Project',
-      builtWith: ['Unity', 'VR', 'Mirror Networking'],
+      title: 'ARTounsi Platform',
+      madeAt: 'Academic project',
+      builtWith: ['Symfony', 'Twig', 'JavaFX', 'CodenameOne'],
+      link: '#', // Replace with actual link if available
+    },
+    {
+      year: 2022,
+      title: 'Typing Simple Script for Linux',
+      madeAt: 'Academic project',
+      builtWith: ['Shell', 'Bash'],
+      link: '#', // Replace with actual link if available
+    },
+    {
+      year: 2021,
+      title: 'Hogwarts',
+      madeAt: 'Academic project ',
+      builtWith: ['PHP', 'HTML', 'CSS', 'JavaScript'],
       link: '#', // Replace with actual link if available
     },
     {
       year: 2021,
       title: 'First Place SDL Project',
-      madeAt: 'University',
+      madeAt: 'Academic project',
       builtWith: ['C++', 'SDL'],
       link: '#', // Replace with actual link if available
     },
   ];
+  
 }

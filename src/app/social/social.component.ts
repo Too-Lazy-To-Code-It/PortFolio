@@ -8,10 +8,7 @@ import { Component } from '@angular/core';
 })
 export class SocialComponent {
   socials = [
-    { name: 'GitHub', url: 'https://github.com', icon: 'github' },
-    { name: 'Instagram', url: 'https://instagram.com', icon: 'instagram' },
-    { name: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
-    { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
-    { name: 'CodePen', url: 'https://codepen.io', icon: 'codepen' }
+    { name: 'GitHub', url: 'https://github.com/Too-Lazy-To-Code-It', icon: 'github' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/adam-rafraf/', icon: 'linkedin' },
   ];
 }

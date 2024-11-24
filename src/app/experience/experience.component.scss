@@ -3,18 +3,18 @@
   --navy: #0a192f;
   --light-navy: #112240;
   --lightest-navy: #233554;
-  --navy-shadow: rgba(2,12,27,0.7);
+  --navy-shadow: rgba(2, 12, 27, 0.7);
   --dark-slate: #495670;
   --slate: #8892b0;
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --white: #e6f1ff;
   --green: #64ffda;
-  --green-tint: rgba(100,255,218,0.1);
-  
+  --green-tint: rgba(100, 255, 218, 0.1);
+
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
-  
+
   --fz-xxs: 12px;
   --fz-xs: 13px;
   --fz-sm: 14px;
@@ -24,6 +24,15 @@
   --fz-xxl: 22px;
 }
 
+// Base styles
+:host {
+  display: block;
+  background-color: var(--navy);
+  color: var(--slate);
+  font-family: var(--font-sans);
+}
+
+// Experience Section
 .experience-section {
   max-width: 900px;
   margin: 0 auto;
@@ -34,28 +43,22 @@
     align-items: center;
     position: relative;
     margin: 10px 0 40px;
-    width: 100%;
     font-size: clamp(26px, 5vw, 32px);
     white-space: nowrap;
     color: var(--lightest-slate);
     font-family: var(--font-sans);
 
     &::before {
-      position: relative;
-      counter-increment: section 1;
       content: "02.";
       margin-right: 10px;
       color: var(--green);
       font-family: var(--font-mono);
       font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
-      font-weight: 400;
     }
 
     &::after {
       content: "";
-      display: block;
-      position: relative;
-      width: 300px;
+      flex-grow: 1;
       height: 1px;
       margin-left: 20px;
       background-color: var(--lightest-navy);
@@ -63,133 +66,127 @@
   }
 }
 
+// Layout Adjustments
 .inner {
   display: flex;
+  flex-wrap: wrap;
 
   @media (max-width: 600px) {
     display: block;
   }
 }
 
+// Job Tabs
 .job-tabs {
-  position: relative;
-  z-index: 3;
-  width: max-content;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
-  list-style: none;
 
   @media (max-width: 600px) {
-    display: flex;
+    flex-direction: row;
     overflow-x: auto;
-    width: calc(100% + 50px);
     margin-left: -50px;
     margin-bottom: 30px;
   }
+
+  .job-tab {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 42px;
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    text-align: left;
+    white-space: nowrap;
+    border: none;
+    border-left: 2px solid var(--lightest-navy);
+    background: transparent;
+    color: var(--slate);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &:hover,
+    &:focus {
+      background-color: var(--light-navy);
+      color: var(--green);
+      outline: none;
+    }
+
+    &.active {
+      color: var(--green);
+      border-left-color: var(--green);
+    }
+
+    &:focus {
+      outline: 2px solid var(--green);
+      outline-offset: -2px;
+    }
+  }
 }
 
-.job-tab {
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  position: relative;
-  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 42px;
-  padding: 0 20px 2px;
-  border-left: 2px solid var(--lightest-navy);
-  background-color: transparent;
-  color: var(--slate);
-  font-family: var(--font-mono);
-  font-size: var(--fz-xs);
-  text-align: left;
-  white-space: nowrap;
-  cursor: pointer;
-  border: none;
-
-  &:hover,
-  &:focus {
-    background-color: var(--light-navy);
-    color: var(--green);
-    outline: none;
-  }
-
-  &.active {
-    color: var(--green);
-    border-left: 2px solid var(--green);
-  }
-}
-
+// Job Panels
 .job-panels {
-  position: relative;
-  width: 100%;
+  flex-grow: 1;
   margin-left: 20px;
 
   @media (max-width: 600px) {
     margin-left: 0;
   }
-}
 
-.job-panel {
-  width: 100%;
-  height: auto;
-  padding: 10px 5px;
+  .job-panel {
+    padding: 10px 5px;
+    animation: fadeIn 0.5s ease-out forwards;
 
-  h3 {
-    margin-bottom: 2px;
-    font-size: var(--fz-xxl);
-    font-weight: 500;
-    line-height: 1.3;
-    color: var(--lightest-slate);
+    h3 {
+      margin-bottom: 2px;
+      font-size: var(--fz-xxl);
+      font-weight: 500;
+      color: var(--lightest-slate);
 
-    .company {
-      color: var(--green);
-    }
-  }
-
-  .range {
-    margin-bottom: 25px;
-    color: var(--light-slate);
-    font-family: var(--font-mono);
-    font-size: var(--fz-xs);
-  }
-
-  .responsibility-list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-size: var(--fz-lg);
-    color: var(--slate);
-
-    li {
-      position: relative;
-      padding-left: 30px;
-      margin-bottom: 10px;
-
-      &::before {
-        content: '▹';
-        position: absolute;
-        left: 0;
+      .company {
         color: var(--green);
+      }
+    }
+
+    .range {
+      margin-bottom: 25px;
+      font-family: var(--font-mono);
+      font-size: var(--fz-xs);
+      color: var(--light-slate);
+    }
+
+    .responsibility-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+
+        &::before {
+          content: '▹';
+          position: absolute;
+          left: 0;
+          color: var(--green);
+        }
       }
     }
   }
 }
 
+// Links
 .inline-link {
-  display: inline-block;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
   position: relative;
-  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
   color: var(--green);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     color: var(--green);
-    outline: 0;
 
     &::after {
       width: 100%;
@@ -201,11 +198,11 @@
     display: block;
     width: 0;
     height: 1px;
-    position: relative;
-    bottom: 0.37em;
     background-color: var(--green);
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    position: absolute;
+    bottom: 0;
     opacity: 0.5;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
 
@@ -220,22 +217,3 @@
     transform: translateY(0);
   }
 }
-
-.job-panel {
-  animation: fadeIn 0.5s ease-out forwards;
-}
-
-// Accessibility improvements
-.job-tab:focus {
-  outline: 2px solid var(--green);
-  outline-offset: -2px;
-}
-
-// Base styles for the entire component
-:host {
-  display: block;
-  background-color: var(--navy);
-  color: var(--slate);
-  font-family: var(--font-sans);
-}
-

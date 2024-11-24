@@ -1,4 +1,3 @@
-// Custom properties
 :root {
   --navy: #0a192f;
   --light-navy: #112240;
@@ -8,10 +7,10 @@
   --lightest-slate: #ccd6f6;
   --white: #e6f1ff;
   --green: #64ffda;
-  
+
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-  
+
   --fz-xxs: 12px;
   --fz-xs: 13px;
   --fz-sm: 14px;
@@ -35,19 +34,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: var(--navy);
 
-    nav {
-      a {
-        color: var(--green);
-        font-family: var(--font-mono);
-        font-size: var(--fz-md);
-        text-decoration: none;
-        transition: color 0.25s ease-in-out;
+    nav a {
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: var(--fz-md);
+      text-decoration: none;
+      transition: color 0.25s ease-in-out;
 
-        &:hover {
-          color: var(--lightest-slate);
-        }
+      &:hover {
+        color: var(--lightest-slate);
       }
     }
   }
@@ -55,6 +51,10 @@
   main {
     flex: 1;
     padding: 0 100px;
+
+    @media (max-width: 768px) {
+      padding: 0 25px;
+    }
   }
 }
 
@@ -65,7 +65,7 @@
 
   .numbered-heading {
     font-size: clamp(40px, 5vw, 60px);
-    margin: 0 0 10px;
+    margin-bottom: 10px;
     color: var(--lightest-slate);
     font-family: var(--font-sans);
     font-weight: 600;
@@ -76,7 +76,6 @@
     color: var(--green);
     font-family: var(--font-mono);
     font-size: var(--fz-md);
-    font-weight: 400;
     margin-bottom: 60px;
   }
 
@@ -90,10 +89,14 @@
     border-collapse: separate;
     border-spacing: 0;
 
-    th {
+    th,
+    td {
       padding: 10px 20px;
+      font-family: var(--font-sans);
       text-align: left;
-      white-space: nowrap;
+    }
+
+    th {
       color: var(--lightest-slate);
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
@@ -107,11 +110,9 @@
     }
 
     td {
-      padding: 12px 20px;
-      font-family: var(--font-sans);
+      color: var(--light-slate);
       font-size: var(--fz-md);
       line-height: 1.5;
-      color: var(--light-slate);
 
       &:first-child {
         padding-left: 0;
@@ -160,23 +161,13 @@
       }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .archive-container {
-    main {
-      padding: 0 25px;
-    }
-  }
-
-  .archive-section {
+  @media (max-width: 768px) {
     padding: 80px 0;
-  }
 
-  .archive-table {
-    td, th {
+    .archive-table th,
+    .archive-table td {
       padding: 10px;
     }
   }
 }
-

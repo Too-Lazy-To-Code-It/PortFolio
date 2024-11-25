@@ -1,135 +1,95 @@
-.header {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+
+  &.scrolled {
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #64ffda;
+  text-decoration: none;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ccd6f6;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.navbar-menu {
+  @media (max-width: 768px) {
     position: fixed;
     top: 0;
-    z-index: 11;
-    padding: 0px 50px;
-    width: 100%;
-    height: 100px;
-    background-color: rgba(2, 12, 27, 0.85);
-    backdrop-filter: blur(10px);
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    filter: none !important;
-    pointer-events: auto !important;
-    user-select: auto !important;
-  
-    @media (max-width: 1080px) {
-      padding: 0 40px;
-    }
-    @media (max-width: 768px) {
-      padding: 0 25px;
-    }
-  
-    &.nav-hidden {
-      transform: translateY(-100%);
-    }
-  
-    &.scrolled {
-      height: 70px;
-      transform: translateY(0px);
-      background-color: rgba(2, 12, 27, 0.85);
-      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    right: 0;
+    bottom: 0;
+    background-color: #112240;
+    width: 75%;
+    max-width: 400px;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: translateX(0);
     }
   }
-  
-  .nav {
-    position: relative;
-    width: 100%;
-    color: var(--lightest-slate);
-    font-family: var(--font-mono);
-    counter-reset: item 0;
-    z-index: 12;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
-  
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    a {
-      color: var(--green);
-      width: 42px;
-      height: 42px;
-      position: relative;
-      z-index: 1;
-  
-      &:hover,
-      &:focus {
-        svg {
-          transform: scale(1.1);
-        }
-      }
-  
-      svg {
-        fill: none;
-        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-        user-select: none;
-      }
-    }
+}
+
+.navbar-link {
+  color: #ccd6f6;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #64ffda;
   }
-  
-  .nav-links {
-    display: flex;
-    align-items: center;
-    
-    @media (max-width: 768px) {
-      display: none;
-    }
-  
-    ol {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-  
-      li {
-        margin: 0 5px;
-        position: relative;
-        counter-increment: item 1;
-        font-size: var(--fz-xs);
-  
-        a {
-          padding: 10px;
-          color: var(--lightest-slate);
-          text-decoration: none;
-  
-          &:hover,
-          &:focus {
-            color: var(--green);
-          }
-  
-          span {
-            margin-right: 5px;
-            color: var(--green);
-          }
-        }
-      }
-    }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 1rem 0;
   }
-  
-  .resume-button {
-    color: var(--green);
-    background-color: transparent;
-    border: 1px solid var(--green);
-    border-radius: 4px;
-    padding: 0.75rem 1rem;
-    font-family: var(--font-mono);
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    margin-left: 15px;
-    font-size: var(--fz-xs);
-  
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: rgba(100, 255, 218, 0.1);
-      outline: none;
-    }
-  }
+}
+
+.navbar-link-number {
+  color: #64ffda;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+}
+

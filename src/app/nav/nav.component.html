@@ -1,8 +1,7 @@
 <nav [class.scrolled]="isScrolled" class="navbar">
   <div class="navbar-container">
     <a href="#" class="navbar-logo">
-      <span class="sr-only">Your Logo</span>
-      <!-- Add your logo SVG or image here -->
+      <span class="logo-text">AR</span>
     </a>
 
     <button 
@@ -23,12 +22,11 @@
       id="navbar-menu" 
       class="navbar-menu" 
       [class.open]="isMobileMenuOpen"
-      (click)="closeMobileMenu()"
     >
       <ul class="navbar-links">
         @for (item of navItems; track item.href) {
           <li>
-            <a [href]="item.href" class="navbar-link">
+            <a [href]="item.href" class="navbar-link" (click)="closeMobileMenu()">
               <span class="navbar-link-number">{{ item.number }}</span>
               {{ item.text }}
             </a>

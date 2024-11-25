@@ -23,11 +23,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
 
   navItems: NavItem[] = [
-    { number: '01', text: 'Home', href: '#home' },
-    { number: '02', text: 'About', href: '#about' },
-    { number: '03', text: 'Experience', href: '#experience' },
-    { number: '04', text: 'Work', href: '#work' },
-    { number: '05', text: 'Contact', href: '#contact' }
+    { number: '01.', text: 'About', href: '#about' },
+    { number: '02.', text: 'Experience', href: '#experience' },
+    { number: '03.', text: 'Work', href: '#work' },
+    { number: '04.', text: 'projects', href: '#projects' },
+    { number: '05.', text: 'Contact', href: '#contact' }
   ];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
@@ -42,6 +42,17 @@ export class NavbarComponent implements OnInit, OnDestroy {
         )
         .subscribe(() => {
           this.isScrolled = window.pageYOffset > 50;
+        });
+
+      fromEvent(window, 'resize')
+        .pipe(
+          takeUntil(this.destroy$),
+          debounceTime(50)
+        )
+        .subscribe(() => {
+          if (window.innerWidth > 768) {
+            this.isMobileMenuOpen = false;
+          }
         });
     }
   }
@@ -59,3 +70,4 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.isMobileMenuOpen = false;
   }
 }
+

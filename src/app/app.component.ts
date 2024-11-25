@@ -1,5 +1,4 @@
 import { NavbarComponent } from './nav/nav.component';
-
 import { Component, HostListener, ViewChild, ElementRef, Inject, PLATFORM_ID, inject } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule, NavigationEnd, Router } from '@angular/router';

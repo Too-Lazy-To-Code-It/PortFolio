@@ -174,6 +174,9 @@
       }
 
       .img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
         filter: grayscale(100%) contrast(1);
         @media (max-width: 768px) { filter: brightness(50%); }
       }

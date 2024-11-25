@@ -17,17 +17,6 @@ interface Project {
 export class WorkComponent {
   featuredProjects: Project[] = [
     {
-      title: 'Artounsi',
-      description:
-        'An art gallery mobile application showcasing and selling artwork. Includes secure Firebase backend, intuitive user interface, and cross-platform compatibility.',
-      tech: ['Flutter', 'Firebase'],
-      links: {
-        github: 'https://github.com/Too-Lazy-To-Code-It/artounsi',
-        external: 'https://too-lazy-to-code-it.github.io/artounsi',
-      },
-      image: 'https://via.placeholder.com/500x300', // Replace with actual image URL
-    },
-    {
       title: 'Sea of Wonders',
       description:
         'A deep-sea exploration game with advanced underwater mechanics, realistic visuals, and immersive gameplay, built using Unreal Engine.',
@@ -35,8 +24,19 @@ export class WorkComponent {
       links: {
         external: 'https://too-lazy-to-code-it.github.io/sea-of-wonders',
       },
-      image: 'https://via.placeholder.com/500x300', // Replace with actual image URL
+      image: 'SeaOfWonders.png', // Replace with actual image URL
     },
+    {
+      title: "AI Racing Simulator",
+      description: "A Unity-based racing simulation featuring AI algorithms like A*, AdHoc, and MCTS for pathfinding and decision-making. Includes grid-based navigation, collision avoidance, and competitive race mechanics.",
+      tech: ["Unity", "C#", "MCTS", "A* Algorithm"],
+      links: {
+        github: "https://github.com/your-username/ai-racing-simulator",
+        external: "https://your-username.github.io/ai-racing-simulator"
+      },
+      image: "RacerAi.png" // Replace with actual image URL
+    },
+
     {
       title: 'Pac-Man AI',
       description:
@@ -45,7 +45,7 @@ export class WorkComponent {
       links: {
         github: 'https://github.com/Too-Lazy-To-Code-It/pacman-ai',
       },
-      image: 'https://via.placeholder.com/500x300', // Replace with actual image URL
+      image: 'PacManAI.png', // Replace with actual image URL
     },
   ];
 }

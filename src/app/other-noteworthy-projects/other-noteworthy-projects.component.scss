@@ -12,7 +12,7 @@ h2 {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3,1fr);
   gap: 15px;
   position: relative;
   list-style: none;
@@ -123,7 +123,6 @@ h2 {
     }
   }
 }
-
 .project-tech-list {
   display: flex;
   align-items: flex-end;
@@ -143,33 +142,6 @@ h2 {
     }
   }
 }
-
-.more-button {
-  color: var(--green);
-  background-color: transparent;
-  border: 1px solid var(--green);
-  border-radius: var(--border-radius);
-  font-size: var(--fz-sm);
-  font-family: var(--font-mono);
-  line-height: 1;
-  text-decoration: none;
-  cursor: pointer;
-  transition: var(--transition);
-  padding: 1.25rem 1.75rem;
-  margin: 80px auto 0;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: var(--green-tint);
-    outline: none;
-  }
-
-  &:after {
-    display: none !important;
-  }
-}
-
 .view-archive-button {
   color: var(--green);
   background-color: transparent;

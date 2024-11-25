@@ -7,7 +7,7 @@ interface ArchiveProject {
   title: string;
   madeAt: string;
   builtWith: string[];
-  link: string;
+  link?: string;
 }
 
 @Component({
@@ -23,15 +23,15 @@ export class ArchiveComponent {
       year: 2024,
       title: 'Artounsi',
       madeAt: 'Academic project',
-      builtWith: ['Flutter', 'Firebase'],
-      link: 'https://github.com/Too-Lazy-To-Code-It/artounsi',
+      builtWith: ['Flutter', 'Dart', 'Firebase'],
+      link: 'https://github.com/Too-Lazy-To-Code-It/ArTounsi/tree/Adam',
     },
     {
       year: 2024,
       title: 'Sea of Wonders',
       madeAt: 'Academic project',
-      builtWith: ['Unreal Engine', 'Blueprints'],
-      link: 'https://too-lazy-to-code-it.github.io/sea-of-wonders',
+      builtWith: ['Unreal Engine 5', 'Blueprints'],
+      link: 'https://gitlab.com/moenes.gueni/seas-of-wonder',
     },
     {
       year: 2024,
@@ -49,74 +49,95 @@ export class ArchiveComponent {
     },
     {
       year: 2024,
+      title: 'Racing AI Simulation',
+      madeAt: 'Academic project',
+      builtWith: ['Unity', 'Pathfinding Algorithms', 'C#'],
+      link: 'https://github.com/Too-Lazy-To-Code-It/Path-Finding',
+    },
+    {
+      year: 2024,
       title: 'Al Moughamiroun 2',
       madeAt: 'Re:School',
       builtWith: ['Unity', '2D Game Mechanics', 'Mirror Networking'],
-      link: '#', // Replace with actual link if available
+      link: 'https://play.google.com/store/apps/details?id=com.EDUGAME.Al_moghamiroun_2&hl=en',
+    },
+
+    {
+      year: 2023,
+      title: 'Chemistry Lab (VR)',
+      madeAt: 'Academic project',
+      builtWith: ['Unity', 'VR','Meta Quest 2'],
+      link: 'https://gitlab.com/4gamix1/chemistry-lab-vr',
+    },
+
+    {
+      year: 2024,
+      title: 'CI/CD Pipeline for Spring Project',
+      madeAt: 'Academic project',
+      builtWith: ['Jenkins', 'Docker', 'Spring', 'SonarQube','Nexus','Trivy','Owasp Scan','Angular'],
+      link: 'https://github.com/Too-Lazy-To-Code-It/DevOps/tree/Adam',
     },
     {
       year: 2024,
       title: 'Akhlate',
       madeAt: 'Game Jam',
       builtWith: ['Unity', 'C#'],
-      link: '#', // Replace with actual link if available
     },
     {
       year: 2023,
-      title: 'Chemistry Lab (VR)',
+      title: 'Endless Runner',
       madeAt: 'Academic project',
-      builtWith: ['Unity', 'VR', 'Mirror Networking'],
-      link: '#', // Replace with actual link if available
+      builtWith: ['Unity', 'Procedural Generation'],
+      link: 'https://gitlab.com/Too-Lazy-To-Code-It/SubwaySurfers',
     },
     {
       year: 2023,
       title: 'BuyCycle',
       madeAt: 'Technologia Academy',
       builtWith: ['MEAN Stack', 'Angular', 'Node.js'],
-      link: 'https://github.com/Too-Lazy-To-Code-It/buycycle',
+      link: 'https://github.com/Too-Lazy-To-Code-It/Applicathioni',
     },
     {
       year: 2023,
-      title: 'CI/CD Pipeline for Spring Project',
-      madeAt: 'Academic project',
-      builtWith: ['Jenkins', 'Docker', 'Spring', 'SonarQube'],
-      link: '#', // Replace with actual link if available
+      title: 'Riotxd',
+      madeAt: 'Personal project',
+      builtWith: ['Python', 'OpenCV', 'PyAutoGUI'],
+      link: 'https://github.com/Too-Lazy-To-Code-It/Riotxd', 
     },
     {
       year: 2022,
       title: 'EcoInfiltrators',
       madeAt: 'Academic project',
       builtWith: ['Unity', 'MEAN Stack', 'Angular', 'Mirror Networking'],
-      link: '#', // Replace with actual link if available
+      link: 'https://gitlab.com/pi-ecoinfiltrators', 
     },
     {
       year: 2022,
       title: 'ARTounsi Platform',
       madeAt: 'Academic project',
       builtWith: ['Symfony', 'Twig', 'JavaFX', 'CodenameOne'],
-      link: '#', // Replace with actual link if available
+      link: 'https://github.com/Too-Lazy-To-Code-It/PIdev',
     },
     {
       year: 2022,
       title: 'Typing Simple Script for Linux',
       madeAt: 'Academic project',
       builtWith: ['Shell', 'Bash'],
-      link: '#', // Replace with actual link if available
+      link: 'https://github.com/Too-Lazy-To-Code-It/5wag-5cripting',
     },
     {
       year: 2021,
       title: 'Hogwarts',
-      madeAt: 'Academic project ',
+      madeAt: 'Academic project',
       builtWith: ['PHP', 'HTML', 'CSS', 'JavaScript'],
-      link: '#', // Replace with actual link if available
+      link: 'https://github.com/Too-Lazy-To-Code-It/PW', 
     },
     {
       year: 2021,
-      title: 'First Place SDL Project',
+      title: 'Veneficus',
       madeAt: 'Academic project',
-      builtWith: ['C++', 'SDL'],
-      link: '#', // Replace with actual link if available
+      builtWith: ['C', 'SDL'],
+      link: 'https://github.com/Too-Lazy-To-Code-It/Veneficus',
     },
   ];
-  
 }

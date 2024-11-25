@@ -27,7 +27,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     { number: '02.', text: 'Experience', href: '#experience' },
     { number: '03.', text: 'Work', href: '#work' },
     { number: '04.', text: 'projects', href: '#projects' },
-    { number: '05.', text: 'Contact', href: '#contact' }
+    { number: '05.', text: 'Contact', href: '#contact' },
+    { number: '06.', text: 'Resume', href: 'Resume-Adam-Rafraf.pdf' }
   ];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
@@ -69,5 +70,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
   }
+  
 }
 

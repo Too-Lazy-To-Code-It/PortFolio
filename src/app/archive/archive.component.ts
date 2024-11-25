@@ -38,7 +38,7 @@ export class ArchiveComponent {
       title: 'Pac-Man AI',
       madeAt: 'Academic project',
       builtWith: ['Unity', 'ML-Agents', 'C#'],
-      link: 'https://github.com/Too-Lazy-To-Code-It/pacman-ai',
+      link: 'https://github.com/Too-Lazy-To-Code-It/PacMan-ML',
     },
     {
       year: 2024,

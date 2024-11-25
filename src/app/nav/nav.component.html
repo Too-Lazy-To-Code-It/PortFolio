@@ -21,15 +21,21 @@
     <div 
       id="navbar-menu" 
       class="navbar-menu" 
-      [class.open]="isMobileMenuOpen"
-    >
+      [class.open]="isMobileMenuOpen">
       <ul class="navbar-links">
         @for (item of navItems; track item.href) {
           <li>
-            <a [href]="item.href" class="navbar-link" (click)="closeMobileMenu()">
+            @if(item.href==="Resume-Adam-Rafraf.pdf"){ <a [href]="item.href" target="_blank" rel="noopener noreferrer" class="navbar-link" (click)="closeMobileMenu()">
               <span class="navbar-link-number">{{ item.number }}</span>
               {{ item.text }}
-            </a>
+            </a>}
+            @else {
+              <a [href]="item.href" class="navbar-link" (click)="closeMobileMenu()">
+                <span class="navbar-link-number">{{ item.number }}</span>
+                {{ item.text }}
+              </a>
+            }
+           
           </li>
         }
       </ul>

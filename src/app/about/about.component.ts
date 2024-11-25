@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   skills: string[] = [
-    'JavaScript (ES6+)',
-    'TypeScript',
+    '.Net',
+    'Spring',
     'Angular',
     'Express.js',
-    'Python',
-    'SQL',
+    'MAYA',
+    'MongoDB',
     'Docker',
     'Jenkins',
     'Unity (2D/3D)',

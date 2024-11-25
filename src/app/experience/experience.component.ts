@@ -20,7 +20,7 @@ export class ExperienceComponent {
       company: 'Re:School',
       title: 'Game Development Intern',
       range: 'July 2024 - September 2024',
-      url: 'https://reschool.com',
+      url: 'https://reschool.education/',
       responsibilities: [
         'Enhanced *Al Moughamiroun 2*, a 2D educational game, by expanding themes from 5 to 8 and designing 7+ maps per theme',
         'Integrated advanced mechanics such as zero gravity, reversed gravity, and planet gravity, boosting player engagement',
@@ -43,7 +43,7 @@ export class ExperienceComponent {
       company: 'CPF',
       title: 'Exploratory Intern',
       range: 'June 2021 - July 2021',
-      url: 'https://cpf.com',
+      url: 'https://www.cpf.gov.tn/',
       responsibilities: [
         'Gained hands-on experience in database management and enterprise-level backup systems',
         'Explored advanced computer hardware and networking configurations, improving diagnostic skills',

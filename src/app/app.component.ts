@@ -54,7 +54,6 @@ export class AppComponent {
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       const window = inject(Window);
-      // Use window object here if needed
     }
   }
 

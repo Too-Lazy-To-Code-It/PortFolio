@@ -22,19 +22,18 @@ export class WorkComponent {
         'A deep-sea exploration game with advanced underwater mechanics, realistic visuals, and immersive gameplay, built using Unreal Engine.',
       tech: ['Unreal Engine', 'Blueprints'],
       links: {
-        external: 'https://too-lazy-to-code-it.github.io/sea-of-wonders',
+        github: 'https://gitlab.com/moenes.gueni/seas-of-wonder',
       },
-      image: 'SeaOfWonders.png', // Replace with actual image URL
+      image: 'SeaOfWonders.png',
     },
     {
       title: "AI Racing Simulator",
       description: "A Unity-based racing simulation featuring AI algorithms like A*, AdHoc, and MCTS for pathfinding and decision-making. Includes grid-based navigation, collision avoidance, and competitive race mechanics.",
       tech: ["Unity", "C#", "MCTS", "A* Algorithm"],
       links: {
-        github: "https://github.com/your-username/ai-racing-simulator",
-        external: "https://your-username.github.io/ai-racing-simulator"
+        github: "https://github.com/Too-Lazy-To-Code-It/Path-Finding",
       },
-      image: "RacerAi.png" // Replace with actual image URL
+      image: "RacerAi.png"
     },
 
     {
@@ -43,9 +42,9 @@ export class WorkComponent {
         'A Pac-Man-inspired game using Unity and ML-Agents to create AI-driven gameplay for dynamic and challenging player experiences.',
       tech: ['Unity', 'ML-Agents', 'C#'],
       links: {
-        github: 'https://github.com/Too-Lazy-To-Code-It/pacman-ai',
+        github: 'https://github.com/Too-Lazy-To-Code-It/PacMan-ML',
       },
-      image: 'PacManAI.png', // Replace with actual image URL
+      image: 'PacManAI.png',
     },
   ];
 }
